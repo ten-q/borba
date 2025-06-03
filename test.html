@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест: Мировые турниры по борьбе</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <header>
+        <div class="шапка">
+            <h1>ТЕСТ: МИРОВЫЕ ТУРНИРЫ ПО БОРЬБЕ 2024-2025</h1>
+            <nav>
+                <ul class="меню">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="test.html">Тест знаний</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="тест-контейнер">
+            <h2>Проверьте свои знания о мировых турнирах по борьбе</h2>
+            <p>Ответы на все вопросы можно найти на главной странице сайта.</p>
+
+            <form id="тест-форма">
+                <div class="вопрос">
+                    <h3>1. Где проходил Чемпионат мира по борьбе в 2024 году?</h3>
+                    <label><input type="radio" name="q1" value="a"> Париж, Франция</label>
+                    <label><input type="radio" name="q1" value="b"> Белград, Сербия</label>
+                    <label><input type="radio" name="q1" value="c"> Токио, Япония</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>2. Сколько золотых медалей завоевали российские борцы на ЧМ 2024?</h3>
+                    <label><input type="radio" name="q2" value="a"> 3</label>
+                    <label><input type="radio" name="q2" value="b"> 5</label>
+                    <label><input type="radio" name="q2" value="c"> 7</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>3. Какой борец подтвердил статус лидера в весе до 97 кг?</h3>
+                    <label><input type="radio" name="q3" value="a"> Кайл Снайдер</label>
+                    <label><input type="radio" name="q3" value="b"> Заурбек Сидаков</label>
+                    <label><input type="radio" name="q3" value="c"> Абдулрашид Садулаев</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>4. В каком городе традиционно проходит Гран-при Ивана Ярыгина?</h3>
+                    <label><input type="radio" name="q4" value="a"> Москва</label>
+                    <label><input type="radio" name="q4" value="b"> Красноярск</label>
+                    <label><input type="radio" name="q4" value="c"> Санкт-Петербург</label>
+                </div>
+
+                <div class="вопрос">
+                    <h3>5. Какая организация объявила об изменениях в правилах борьбы?</h3>
+                    <label><input type="radio" name="q5" value="a"> FILA</label>
+                    <label><input type="radio" name="q5" value="b"> UWW</label>
+                    <label><input type="radio" name="q5" value="c"> IOC</label>
+                </div>
+
+                <button type="button" class="кнопка-проверить" onclick="проверитьТест()">Проверить ответы</button>
+            </form>
+
+            <div id="результаты" class="результаты-теста"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="подвал">
+            <p>© 2025 Мир борьбы. Все права защищены.</p>
+            <div class="соцсети">
+                <a href="#"><img src="Ссылка на картинку 12" alt="Facebook"></a>
+                <a href="#"><img src="Ссылка на картинку 13" alt="Instagram"></a>
+                <a href="#"><img src="Ссылка на картинку 14" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function проверитьТест() {
+            const ответы = {
+                q1: "b",
+                q2: "b",
+                q3: "c",
+                q4: "b",
+                q5: "b"
+            };
+
+            let баллы = 0;
+            const форма = document.getElementById('тест-форма');
+            const результаты = document.getElementById('результаты');
+
+            for (let i = 1; i <= 5; i++) {
+                const выбранныйОтвет = форма.elements[`q${i}`].value;
+                if (выбранныйОтвет === ответы[`q${i}`]) {
+                    баллы++;
+                }
+            }
+
+            const процент = (баллы / 5) * 100;
+            let оценка;
+
+            if (процент >= 80) оценка = "Отлично!";
+            else if (процент >= 60) оценка = "Хорошо";
+            else if (процент >= 40) оценка = "Удовлетворительно";
+            else оценка = "Плохо";
+
+            результаты.innerHTML = `
+                    <h3>Ваш результат: ${баллы} из 5</h3>
+                    <p>${оценка}</p>
+                    <p>${процент}% правильных ответов</p>
+                    <p>Попробуйте улучшить результат, изучив материалы на главной странице!</p>
+                `;
+        }
+    </script>
+</body>
+</html>

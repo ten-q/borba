@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мировые турниры по борьбе 2024-2025</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <header>
+        <div class="шапка">
+            <h1>МИРОВЫЕ ТУРНИРЫ ПО БОРЬБЕ 2024-2025</h1>
+            <nav>
+                <ul class="меню">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="test.html">Тест знаний</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="основной-контент">
+            <article class="введение">
+                <h2>Современная борьба на мировой арене</h2>
+                <p>2024-2025 годы стали знаковыми для мирового сообщества борьбы. В этом сезоне мы увидели множество захватывающих турниров, неожиданных побед и драматических поражений.</p>
+                <img src="борьба.jpg" alt="Борьба на ковре" class="основная-картинка">
+            </article>
+
+            <div class="реклама-блок" id="реклама">
+                <span class="фейк-крестик">×</span>
+                <a href="https://yunost43.ru/greko-rimskaya-borba/" target="_blank">
+                    <img src="работаем.jpg" alt="Реклама" class="реклама-изображение">
+                    <p>Специальное предложение для любителей борьбы!</p>
+                </a>
+            </div>
+
+            <article class="турниры-сетка">
+                <h2>Ключевые турниры сезона</h2>
+                <div class="сетка-турниров">
+                    <div class="турнир-карточка">
+                        <h3>Чемпионат мира 2024</h3>
+                        <img src="сетка1.jpg" alt="Чемпионат мира">
+                        <p>Прошел в Белграде, Сербия в сентябре 2024 года. Российские борцы завоевали 5 золотых медалей.</p>
+                        <div class="видео-контейнер">
+                            <iframe src="видео1.MP4" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="турнир-карточка">
+                        <h3>Гран-при Ивана Ярыгина 2025</h3>
+                        <img src="ярыкин.jpg" alt="Гран-при Ярыгина">
+                        <p>Традиционный турнир в Красноярске собрал рекордное количество участников в январе 2025.</p>
+                        <img src="бросок.gif" alt="Момент схватки" class="гифка">
+                    </div>
+                    <div class="турнир-карточка">
+                        <h3>Олимпийские игры 2024</h3>
+                        <img src="париж.jpg" alt="Олимпиада">
+                        <p>Париж принял лучших борцов планеты. Вольная борьба подарила множество сенсаций.</p>
+                    </div>
+                    <div class="турнир-карточка">
+                        <h3>Кубок мира 2025</h3>
+                        <img src="азиа.jpg" alt="Кубок мира">
+                        <p>Командные соревнования в Будапеште показали рост уровня азиатских стран.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="перспективы">
+                <h2>Перспективные борцы сезона</h2>
+                <div class="список-перспектив">
+                    <div class="борец">
+                        <img src="боец1.jpg" alt="Борец 1">
+                        <h4>Абдулрашид Садулаев</h4>
+                        <p>Двукратный олимпийский чемпион подтвердил статус лидера в весе до 97 кг.</p>
+                    </div>
+                    <div class="борец">
+                        <img src="боец2.jpg" alt="Борец 2">
+                        <h4>Кайл Снайдер</h4>
+                        <p>Американский ветеран показал, что еще способен на высшие достижения.</p>
+                    </div>
+                    <div class="борец">
+                        <img src="боец3.jpg" alt="Борец 3">
+                        <h4>Заурбек Сидаков</h4>
+                        <p>Перешел в новую весовую категорию и сразу завоевал золото ЧМ.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="новости">
+                <h2>Последние новости</h2>
+                <div class="новость">
+                    <img src="правила.jpg" alt="Новость 1">
+                    <h4>Изменения в правилах UWW</h4>
+                    <p>Международная федерация борьбы объявила о корректировках правил на 2025 год.</p>
+                </div>
+                <div class="новость">
+                    <img src="астана.jpg" alt="Новость 2">
+                    <h4>Новый турнир в Казахстане</h4>
+                    <p>Впервые в Астане пройдет этап Гран-при с призовым фондом $200,000.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="подвал">
+        </div>
+    </footer>
+
+    <script>
+        // Анимация крестика
+        document.querySelector('.фейк-крестик').addEventListener('mouseover', function () {
+            this.style.transform = 'scale(1.3)';
+            this.style.color = '#ff0000';
+        });
+
+        document.querySelector('.фейк-крестик').addEventListener('mouseout', function () {
+            this.style.transform = 'scale(1)';
+            this.style.color = '#ffffff';
+        });
+
+        // Крестик не закрывает рекламу, а переходит по ссылке
+        document.querySelector('.фейк-крестик').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://yunost43.ru/greko-rimskaya-borba/', '_blank');
+        });
+    </script>
+</body>
+</html>
